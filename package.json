@@ -16,7 +16,8 @@
     "test:staged": "vitest run --passWithNoTests",
     "test:coverage": "vitest run --coverage --passWithNoTests",
     "test:ui": "vitest --ui",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "npx lefthook install"
   },
   "dependencies": {
     "react": "^18.3.1",
