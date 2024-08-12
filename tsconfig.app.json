@@ -26,7 +26,11 @@
     /* Paths and Alias */
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src"]

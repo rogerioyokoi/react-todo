@@ -20,9 +20,14 @@
     "postinstall": "npx lefthook install"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.0"
+    "react-router-dom": "^6.26.0",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -38,6 +43,7 @@
     "@vitest/coverage-istanbul": "^2.0.5",
     "@vitest/ui": "^2.0.5",
     "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.1",
     "commitizen": "^4.3.0",
     "cssnano": "^7.0.4",
     "cz-conventional-changelog": "^3.3.0",
