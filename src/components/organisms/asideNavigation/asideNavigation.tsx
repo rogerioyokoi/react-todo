@@ -5,13 +5,16 @@ import { FC } from 'react';
 import TodoLogoIcon from '../../../assets/svg/todo.svg';
 
 interface AsideNavigationProps {
+  isLargeScreen: boolean;
   isOpen: boolean;
   handleClick: () => void;
 }
 
-const AsideNavigation: FC<AsideNavigationProps> = ({ isOpen, handleClick }) => {
+const AsideNavigation: FC<AsideNavigationProps> = ({ isOpen, handleClick, isLargeScreen }) => {
+  const drawerVariant = isLargeScreen ? 'permanent' : 'temporary';
+
   return (
-    <Drawer isOpen={isOpen} variant="permanent" onClickOutside={handleClick}>
+    <Drawer isOpen={isOpen} variant={drawerVariant} onClickOutside={handleClick}>
       <DrawerHeader onClose={handleClick}>
         <div className="flex items-center gap-4">
           <img src={TodoLogoIcon} alt="Logomarca da aplicação" width={48} height={48} />

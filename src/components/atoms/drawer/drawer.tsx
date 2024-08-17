@@ -7,7 +7,13 @@ interface DrawerProps extends PropsWithChildren {
   onClickOutside?: () => void;
 }
 
-const Drawer: FC<DrawerProps> = ({ children, isOpen, variant }) => {
+const Drawer: FC<DrawerProps> = ({ children, isOpen, variant, onClickOutside }) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Escape') {
+      onClickOutside?.();
+    }
+  };
+
   return (
     <aside
       className={
@@ -32,11 +38,9 @@ const Drawer: FC<DrawerProps> = ({ children, isOpen, variant }) => {
         <section
           role="button"
           className=" w-screen h-screen cursor-pointer "
-          onClick={() => {
-            console.warn('click');
-          }}
-          onKeyDown={(key) => console.warn(key)}
-          tabIndex={-1}
+          onClick={() => onClickOutside?.()}
+          onKeyDown={handleKeyPress}
+          tabIndex={0}
         />
       )}
     </aside>

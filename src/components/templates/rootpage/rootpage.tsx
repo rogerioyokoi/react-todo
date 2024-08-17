@@ -18,17 +18,19 @@ const RootPage: React.FC = () => {
     }
   }, [isLargeScreen]);
 
-  console.warn('openDrawer: ', openDrawer);
-
   return (
-    <div className="flex relative h-screen xl">
-      <AsideNavigation isOpen={openDrawer} handleClick={() => setOpenDrawer(!openDrawer)} />
+    <div className="flex relative h-screen">
+      <AsideNavigation
+        isLargeScreen={isLargeScreen}
+        isOpen={openDrawer}
+        handleClick={() => setOpenDrawer(!openDrawer)}
+      />
       <div
         className={clsx('w-screen', {
-          'ml-72': isLargeScreen && openDrawer,
+          'pl-72': isLargeScreen && openDrawer,
         })}
       >
-        <div className="w-full fixed">
+        <div className="w-full fixed right-0">
           <HeaderApplication
             showMenuIcon={!isLargeScreen || !openDrawer}
             onMenuClick={() => setOpenDrawer(!openDrawer)}

@@ -2,6 +2,7 @@ export type Size = 'small' | 'medium' | 'large';
 export type SizeShort = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type Color = 'primary' | 'secondary' | 'neutral' | 'white';
 export type Variant = 'contained' | 'outlined' | 'solo';
+export type Shape = 'circular' | 'rounded' | 'square';
 export type Rounded = 'sm' | 'md' | 'lg' | 'full' | 'none';
 export type ColorVariant = {
   color?: Color;
